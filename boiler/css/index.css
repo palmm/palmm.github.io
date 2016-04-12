@@ -1,0 +1,209 @@
+.landing-container {
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  /*background: purple;*/
+}
+
+.landing-container, .main-text, .headshot, .header, .wip {
+  flex: 1 100%
+}
+
+.header {
+  list-style: none;
+  margin: 0;
+  /*background: #a8b6bf;*/
+  background: #333333;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+
+.header a {
+  text-decoration: none;
+
+  display: block;
+  padding: 15px;
+  color: white;
+}
+
+.header a:hover {
+  /*background: #00b7f5;*/
+  background: #869096;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.375em;
+}
+
+.header > a {
+  background: #696969;
+}
+
+.headshot {
+  /*background: green;*/
+}
+
+.headshot img{
+  /*max-width: 100%;
+  height: auto;*/
+  border-radius: 25%;
+}
+
+.links {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+
+  /*background: hotpink;*/
+}
+
+.links > a .fa {
+  padding-right: 7px;
+}
+
+.links a:hover {
+  color: #a8b6bf;
+}
+
+.main-text {
+  color: #444;
+  /*background: grey;*/
+}
+
+.title {
+  font-family: 'Libre Baskerville', baskerville, serif;
+  font-size: 2.5em;
+  line-height: 1.5em;
+  /*background: gold;*/
+}
+
+.intro {
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-size: 1.5em;
+  line-height: 1.375em;
+  /*background: skyblue;*/
+}
+
+.wip {
+  font-family: 'Raleway', helvetica, sans-serif;
+  font-size: 1em;
+  color:#FF3030;
+  line-height: 1.2em;
+  /*background: skyblue;*/
+}
+
+.wip {
+  /*background: lightgreen;*/
+  width:100%;
+  /*height:50px;*/
+  text-align: center;
+}
+
+@media all and (max-width: 800px) {
+  .header {
+    /*-webkit-flex-flow: column wrap;
+    flex-flow: column wrap;*/
+    padding: 0;
+
+    -webkit-align-items: center;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .header a {
+    padding: .5em;
+  }
+
+  .headshot img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .headshot, .main-text{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/*Attributes for small and smallish screens*/
+/*Make title and text centered*/
+@media all and (max-width: 1050px) {
+
+  .main-text {
+      text-align: center;
+      line-height: 1.25;
+  }
+
+  .title{
+      font-size: 2.0em;
+  }
+
+  .intro {
+      font-size: 1.0em;
+  }
+
+  .headshot {
+    flex: 1 auto;
+    text-align: center;
+  }
+
+  .footer {
+    /*margin-top: 25px;*/
+  }
+
+  .header{
+    /*margin-bottom: 25px;*/
+  }
+}
+
+/*Medium Screen to Large Screens*/
+@media all and (min-width: 1051px) {
+  .headshot {
+    order: 1;
+    flex: none;
+
+    margin-left: 125px;
+    margin-right: 25px;
+    /*margin-top: 75px;*/
+  }
+
+  .main-text {
+    order: 2;
+    flex: 1;
+
+    margin-right: 125px;
+    margin-left: 25px;
+    /*margin-top: 55px;*/
+  }
+
+  .wip {
+    order: 3;
+    /*margin-top: 75px;*/
+  }
+
+  .links > a{
+    padding-right: 75px;
+  }
+
+  .header{
+    margin-bottom: 75px;
+  }
+}

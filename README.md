@@ -1,2 +1,2 @@
 # palmm.github.io
-Personal website project.
+My slice of internet pie.

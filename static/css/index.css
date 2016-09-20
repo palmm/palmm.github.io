@@ -1,0 +1,439 @@
+/* ------------ All ------------ */
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  /* Antialiasing hints ... might not be really supported yet*/
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+  display: block;
+}
+
+/* each page of site is one screen height */
+.page {
+  position: static;
+
+  width: 100%;
+  height: 100vh;
+
+  top: 0px;
+  left: 0px;
+}
+
+/*
+  put something in top left relative to page (hidden)
+  used for anchors for page jumps
+*/
+.jump {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+/* make something unselectable */
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  position: fixed;
+  top:0px;
+  left: 0px;
+
+  z-index: 2;
+  overflow: hidden;
+
+  width: 100%;
+  height: 75px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+}
+
+.logo {
+  background: #205CB5;
+
+  border-radius: 2px;
+  margin-right: 35px;
+
+  width: 60px;
+  height: 60px;
+
+  cursor: pointer;
+}
+
+.logo a {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo:hover {
+  background: #423fad;
+}
+
+.logo:active {
+  background: #2d2b75;
+}
+
+.icon-logo {
+  width: 35px;
+  height: 35px;
+
+  margin-left: 3px;
+
+  fill: white;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #205CB5;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
+ /*space middle page link */
+.navLinks a:nth-of-type(2) {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.navLinks a:hover {
+  color: #423fad;
+}
+
+.navLinks a:active {
+  color: #2d2b75;
+}
+
+.navLinks .active {
+  color: #d0dcea;
+}
+
+/* ---------- Landing Page ---------- */
+
+.landingContainer {
+  height: 100%;
+  width: 100%;
+
+  display: -webkit-flex;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background: #f4fafa;
+}
+
+.faceFlipper {
+  position: relative;
+  z-index: 1;
+}
+
+.face img, .faceFlipper, .face, .front, .back {
+  width: 425px;
+  height: 425px;
+  border-radius: 15px;
+}
+
+.front, .back {
+  background: #f2ebe2;
+}
+
+.landing .text {
+  margin-left: 8vw;
+  width: 33vw;
+}
+
+.landing .text h1 {
+  font-family: 'Vollkorn', serif;
+  font-weight: lighter;
+  font-size: 2.75em;
+  line-height: 1.05em;
+}
+
+.landing .text h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+.externalLinks {
+  display: flex;
+  align-items: center;
+
+  margin-top: 15px;
+}
+
+.externalLinks svg {
+  width: 42px;
+  height: 42px;
+}
+
+.resumeIcon {
+  position: relative;
+
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.resumeIcon .icon-file-text-o {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+
+  top: 9px;
+  left: 9px;
+
+  fill: #f4fafa;
+}
+
+.resumeIcon p {
+  display: none;
+}
+
+.resumeIcon:hover .icon-file-text-o{
+  display: none;
+}
+
+.resumeIcon:hover p {
+  display: block;
+  position: absolute;
+
+  font-family: 'Source Code Pro', 'Consolas', 'monaco', monospace;
+  font-size: 25px;
+
+  top: 3px;
+  left: 6px;
+
+  color: white;
+}
+
+.externalLinks a:nth-of-type(2) {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.externalLinks a {
+  fill: #205CB5;
+}
+
+.externalLinks a:hover {
+  fill: #423fad;
+}
+
+.externalLinks a:active {
+  fill: #2d2b75;
+}
+
+.bottomChevron {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottomChevron svg {
+  width: 40px;
+  height: 40px;
+
+  fill: #3F57AD;
+}
+
+.bottomChevron svg:hover {
+  fill: #423fad;
+}
+
+.bottomChevron svg:active {
+  fill: #2d2b75;
+}
+
+/* face flipping */
+.faceFlipper {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+  cursor: pointer;
+}
+
+.face {
+	-webkit-transition: 900ms;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 900ms;
+	-moz-transform-style: preserve-3d;
+
+  -ms-transition: 900ms;
+  -ms-transform-style: preserve-3d;
+
+  -o-transition: 900ms;
+	-o-transform-style: preserve-3d;
+
+	transition: 900ms;
+	transform-style: preserve-3d;
+}
+
+/* lift class is for use with js */
+.face:hover, .face.lift {
+  -webkit-transform: rotateX(7deg);
+	-moz-transform: rotateX(7deg);
+  -ms-transform: rotateX(7deg);
+  -o-transform: rotateX(7deg);
+	transform: rotateX(7deg);
+
+  box-shadow: 0 5px 10px rgba(50,50,50,.2);
+}
+
+.face.flip {
+  -webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+/* lift class is for use with js */
+.face.flip:hover, .face.flip.lift {
+  -webkit-transform: rotateX(173deg);
+	-moz-transform: rotateX(173deg);
+  -ms-transform: rotateX(173deg);
+  -o-transform: rotateX(173deg);
+	transform: rotateX(173deg);
+
+  box-shadow: 0 5px 10px rgba(50,50,50,.2);
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.back {
+	-webkit-transform: rotateX(180deg);
+	-moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+/* ---------- About ---------- */
+
+.aboutContainer {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.aboutContainer .text {
+  margin-top: 33vh;
+  margin-left: 175px;
+  margin-right: 175px;
+}
+
+.about .text h1 {
+  font-family: 'Vollkorn', serif;
+  font-weight: lighter;
+  font-size: 2.75em;
+  line-height: 1.05em;
+
+  color: #205CB5;
+}
+
+.about .text h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+.about .text a {
+  text-decoration: none;
+  color: #205CB5;
+
+  font-weight: lighter;
+}
+
+.about .text a:hover {
+  color: #423fad;
+}
+
+.about .text a:active {
+  color: #2d2b75;
+}
+
+.about svg {
+  position: relative;
+  top: 97vh;
+  left: 97vw;
+
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------- Responsive ---------- */
+
+/* for smaller displays */
+@media (max-width:889px) {
+  .landing .text {
+    text-align: center;
+    margin-left: 0px;
+    flex: auto;
+  }
+
+  /*.landing .face {
+    width: 50vh;
+    height: 50vh;
+  }*/
+
+  .externalLinks {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottomChevron {
+    display: none;
+  }
+
+  .header {
+    position: fixed;
+    bottom: 100vh;
+  }
+
+  .guide {
+    display: none;
+  }
+}

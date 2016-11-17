@@ -1,9 +1,11 @@
 var foundFace = false;
 
-document.addEventListener('DOMContentLoaded', function() { start() }, false);
+window.onload = function() {
+  start();
+};
 
 function start() {
-
+  console.log("starting");
   // face flipping
   document.getElementById("faceFlipper").addEventListener("click", function() { flipFace() });
 

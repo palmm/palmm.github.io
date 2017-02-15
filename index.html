@@ -1,125 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <title>Palmer McCutcheon</title>
-  <meta name="description" content="Canadian Student Engineer." />
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Palmer McCutcheon</title>
+	<style type="text/css">
+	  body {
+	    margin:40px auto;
+      max-width:650px;
+      line-height:1.6;
+      font-size:18px;
+      color:#444;
+      padding:0 10px
+    }
+    h1, h2, h3 {
+      line-height:1.2;
+    }
+    code {
+      padding: 2px 4px;
+      font-size: 85%;
+      color: #d44950;
+      background-color: #f7f7f9;
+      border-radius: .2rem;
+    }
+	</style>
+</head>
 
-  <link rel="stylesheet" href="./static/css/index.css" />
+<body>
+	<header>
+		<h1>
+      Palmer M<sup>c</sup>Cutcheon
+    </h1>
+	</header>
 
-  <link rel="icon" href="./static/img/favicon.ico">
-  <link rel="icon" type="image/png" href="./static/img/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="./static/img/favicon-16x16.png" sizes="16x16" />
+  <p>
+    trying to figure out <code>react</code>, <code>react-native</code> and <code>$ who -m</code>
+  </p>
 
-  <link href="https://fonts.googleapis.com/css?family=Vollkorn|Lato|Source+Code+Pro" rel="stylesheet">
+  <p>
+    <a href="http://github.com/palmm">
+       projects
+    </a>
+  </p>
 
-  <!-- GoogleAnalytics -->
+  <p>
+    <a href="mailto:&#112;&#97;&#108;&#109;&#101;&#114;&#46;&#109;&#99;&#99;&#117;&#116;&#99;&#104;&#101;&#111;&#110;&#64;&#113;&#117;&#101;&#101;&#110;&#115;&#117;&#46;&#99;&#97;">
+      email
+    </a>
+  </p>
+
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
     ga('create', 'UA-73067566-1', 'auto');
     ga('send', 'pageview');
-
   </script>
-
-  <!-- site functionality js -->
-  <script type="text/javascript" src="./static/js/site.js" async></script>
-</head>
-
-<body>
-  <div class="header">
-    <div class="logo">
-      <a href="#landing">
-        <svg class="icon-logo"><use xlink:href="static/img/icons.svg#icon-logo"></use></svg>
-      </a>
-    </div>
-
-    <div class="navLinks unselectable">
-      <a id="landingButton" href="#landing">Landing</a>
-      <a id="aboutButton" href="#about">About</a>
-      <a id="resumeButton" href="./static/other/PalmerMcCutcheonResume.pdf">Resume</a>
-    </div>
-  </div>
-
-  <div class="landing page">
-    <div id="landingJump" class="jump">
-      <a name="landing"></a>
-    </div>
-
-    <div class="landingContainer">
-      <div id="faceFlipper" class="faceFlipper unselectable">
-        <div id="face" class="face unselectable">
-          <div class="front unselectable">
-            <img src="./static/img/beardless.png"/>
-          </div>
-          <div class="back unselectable">
-            <img src="./static/img/beardful.png"/>
-          </div>
-        </div>
-      </div>
-
-      <div class="text">
-        <h1>Palmer M<sup>c</sup>Cutcheon</h1>
-        <h2>
-          Canadian Computer Engineering student with ethusiasm for startups, software development and cutting edge hardware.
-        </h2>
-
-        <div class="externalLinks">
-          <a href="http://github.com/palmm">
-            <svg class="icon-github-square"><use xlink:href="static/img/icons.svg#icon-github-square"></use></svg>
-          </a>
-          <a href="http://www.linkedin.com/in/palmm">
-            <svg class="icon-linkedin-square"><use xlink:href="static/img/icons.svg#icon-linkedin-square"></use></svg>
-          </a>
-          <a href="mailto:&#112;&#97;&#108;&#109;&#101;&#114;&#46;&#109;&#99;&#99;&#117;&#116;&#99;&#104;&#101;&#111;&#110;&#64;&#113;&#117;&#101;&#101;&#110;&#115;&#117;&#46;&#99;&#97;">
-            <svg class="icon-envelope-square"><use xlink:href="static/img/icons.svg#icon-envelope-square"></use></svg>
-          </a>
-
-          <div class="resumeIcon">
-            <a href="./static/other/PalmerMcCutcheonResume.pdf">
-              <svg class="icon-square"><use xlink:href="static/img/icons.svg#icon-square"></use></svg>
-              <svg class="icon-file-text-o"><use xlink:href="static/img/icons.svg#icon-file-text-o"></use></svg>
-              <p>cv</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bottomChevron">
-      <a href="#about">
-        <svg class="icon-chevron-down"><use xlink:href="static/img/icons.svg#icon-chevron-down"></use></svg>
-      </a>
-    </div>
-  </div>
-
-  <div class="about page">
-    <div id="aboutJump" class="jump">
-      <a name="about"></a>
-    </div>
-
-    <div class="aboutContainer">
-      <div class="text">
-        <h1>Hey I'm Palmer.</h1>
-        <h2>
-          I am in my 3rd year of Computer Engineering studies at Queen's
-          University in Kingston, Canada. I’ve recently been focusing on
-          learning about software development which has granted me
-          experiences with Java, HTML, CSS, JavaScript and React.
-          If you’d like to know more,
-          <a id="resumeButton" href="./static/other/PalmerMcCutcheonResume.pdf">check out my resume</a>,
-          some of the <a href="http://github.com/palmm">projects I’ve done</a> or
-          <a href="mailto:&#112;&#97;&#108;&#109;&#101;&#114;&#46;&#109;&#99;&#99;&#117;&#116;&#99;&#104;&#101;&#111;&#110;&#64;&#113;&#117;&#101;&#101;&#110;&#115;&#117;&#46;&#99;&#97;">
-            contact me</a>.
-        </h2>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
